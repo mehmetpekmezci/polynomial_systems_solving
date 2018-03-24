@@ -1,0 +1,216 @@
+\documentclass[11pt]{article}
+%Homework 01 |065|=)
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,citecolor=black,linkcolor=black,urlcolor=blue]{hyperref}
+\usepackage{tikz,graphics,color,fullpage,float,epsf,caption,subcaption}
+\usepackage[utf8]{inputenc}
+
+
+\title{\textbf{Plynomial Systems Solving}}
+\author{Mehmet Pekmezci\\
+		Burak Şener\\
+		Mustafa Mert Ergin
+		}
+\date{}
+\begin{document}
+
+
+
+
+\maketitle
+\textbf{}
+
+\begin{abstract}
+\emph{This work is a survey on the subject Polynomial Systems Solving.}
+\end{abstract}
+
+\section{Introduction}
+
+Spanning Tree of a graph G ,  is a tree (acyclic connected graph) that contains all the vertices's of that graph . As it is a tree structure, there is only one path from one point(vertex) to another.\footnote{https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/}  
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.4\linewidth]{spanning.png}
+  \caption[Spanning Tree of a graph G ]{Spanning Tree of a graph G \footnotemark}
+  \label{fig:spanningTree}
+\end{figure}
+\footnotetext{\url{https://en.wikipedia.org/wiki/Minimum_spanning_tree}}
+
+\section{Previous Work}
+Minimum Spanning Tree of an undirected and weighted graph G , is the spanning tree of G with the minimum  total edge weights. \footnote{http://www.scielo.br/scielo.php?script=sci\_arttext\&pid=S0101-74382005000200004} There are a lot of algorithms finding M.S.T. of a graph, including Kruskal ve Prim algorithms. 
+ 
+\section{Conclusion}
+Kruskal and Prim algorithms finds the minimum spanning tree, but if we want to find all spanning trees , several algorithms exist (e.g. Gabow \& Myers, 1978; Kapoor \& Ramesh, 1995; Matsui, 1993; Minty, 1965; Shioura \& Tamura, 1995; Read \& Tarjan, 1975; Kapoor \& Ramesh, 2000; Matsui, 1997). Good space and time complexities are the most important concerns of these algorithms. Most algorithms generate spanning trees using some fundamental cut or circuit, but none of them takes the cost of the tree into account while generating spanning trees, except Kenneth SORENSEN  and  Gerrit K. JANSSENS,  with the article "An algorithm to generate all spanning trees of a graph in order of increasing cost. Pesqui. Oper. [online]. 2005, vol.25, n.2" . In this article they generate all spanning trees in order of increasing cost.
+
+There is a recent paper that uses divide and conquer algorithm to find all spanning trees of a graph which is called DCC\_Trees. (Chakraborty, Maumita \& Hazra, Goutam \& Pal, Rajat. (2018). Divide-and-Conquer: An Approach to Generate All Spanning Trees of a Connected and Undirected Simple Graph)\footnote{http://www.springer.com/cda/content/document/cda\_downloaddocument/9789811034084\-c2.pdf}
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{graph0.png}
+    \caption{Graph G.}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{graph1.png}
+    \caption{$\mathrm{G_{1}}$ = G - \{$\mathrm{e_{4}}$\}.}
+  \end{subfigure}
+  \caption[Partitions]{Partitions of a graph G \footnotemark}
+  \label{fig:coffee1}
+\end{figure}\footnote{http://www.springer.com/cda/content/document/cd\_downloaddocument/9789811034084\-c2.pdf}
+
+DCC\_Trees algorithm is as follows : \cite[chapter 2, p.~215]{berndStrumfelsBook}
+
+\begin{enumerate}
+\item Divide : Divide the graph into primary and secondary partitions
+	\begin{enumerate}
+		\item Primary Partition : All possible combinations of the edges coming out from the reference vertex, $\mathrm{v_{ref}}$ , taken one to all at a time, form the primary partitions in this algorithm.
+		\item Secondary Partition  : Once a primary partition is selected, one or more vertices, other than the $\mathrm{v_{ref}}$ , also get included or visited.
+	\end{enumerate}
+\item Conquer : Searching for Connectors. 
+\item Combine : Forming the Trees
+\end{enumerate}
+
+
+Finiteness of the algorithm can be proven by saying that we have limited number of edges/vertices's.
+
+Correctness of the algorithm is proven by the two theorems within the paper. 
+
+
+
+
+\section{Conlusion}
+Total number of spanning trees are calculated using  Kirchhoff’s Theorem.\footnote{https://www.geeksforgeeks.org/total-number-spanning-trees-graph/}
+\footnote{https://en.wikipedia.org/wiki/Kirchhoff\%27s\_theorem\#Proof\_outline}
+
+
+\begin{thebibliography}{1}
+\bibitem{berndStrumfelsBook}
+  Strumfels Bernd,
+  \textit{Solving Systems of Polynomial Equations},
+   American Mathematical Society , Conference Board of Mathematical Sciences,
+   Berkeley,CA,
+   2002.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{hybridMethodArticle}
+  L.H. Zhi and Y. Notake and H. Kai and M.-T. Noda and K.I. Shiraishi,
+  \textit{Hybrid Method for Solving Polynomial Equations},
+   Proceedings of the Asian Technology Conference in Mathematics, pp.492-501, Guangzhou, China, 1999. 
+\bibitem{gregoryBardThesis}
+  Bard Gregory,
+  \textit{Algorithms for Solving Linear and Polynomial Systems of Equations Over Finite Fields With Applications to Cryptanalysis},
+   University of Maryland PHD Thesis,
+   2007.
+\bibitem{dineshManocaArticle}
+  Luk Bettale 1 , Jean-Charles Faugère, Ludovic Perret,
+  \textit{Solving multivariate polynomial systems over finite fields : Hybrid approach},
+   Journées Nationales du Calcul Formel,
+   UPMC, CNRS, INRIA Paris-Rocquencourt,
+   2002.
+   
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{dineshManocaArticle}
+  Manocha Dinesh,
+  \textit{Solving Systems of Polynomial Equations},
+   IEEE Computer Graphics and Applications
+   University of North Carolina,
+   1994.
+\bibitem{berndStrumfelsBook}
+  \textit{ https://en.wikipedia.org/wiki/System\_of\_polynomial\_equations},
+   Wikipedia,2018.
+
+\end{thebibliography}
+
+\end{document}
+
+
+

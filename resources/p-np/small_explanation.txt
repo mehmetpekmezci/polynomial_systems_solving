@@ -1,0 +1,15 @@
+____________________________________________________________
+| Problem Type | Verifiable in P time | Solvable in P time | Increasing Difficulty
+___________________________________________________________|           |
+| P            |        Yes           |        Yes         |           |
+| NP           |        Yes           |     Yes or No *    |           |
+| NP-Complete  |        Yes           |      Unknown       |           |
+| NP-Hard      |     Yes or No **     |      Unknown ***   |           |
+____________________________________________________________           V
+
+Notes on Yes or No entries:
+
+    * An NP problem that is also P is solvable in P time.
+    ** An NP-Hard problem that is also NP-Complete is verifiable in P time.
+    *** NP-Complete problems (all of which form a subset of NP-hard) might be. The rest of NP hard is not.
+
