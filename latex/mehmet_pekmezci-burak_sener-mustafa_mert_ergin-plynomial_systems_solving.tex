@@ -7,28 +7,57 @@
 \usepackage{tikz,graphics,color,fullpage,float,epsf,caption,subcaption}
 \usepackage[utf8]{inputenc}
 
-
 \title{\textbf{Plynomial Systems Solving}}
-\author{Mehmet Pekmezci\\
-		Burak Şener\\
-		Mustafa Mert Ergin
+\author{Burak ŞENER\\
+        Mehmet PEKMEZCİ\\
+		Mustafa Mert ERGİN
 		}
 \date{}
 \begin{document}
-
-
-
-
 \maketitle
-\textbf{}
-
 \begin{abstract}
-\emph{This work is a survey on the subject Polynomial Systems Solving.}
+\emph{This work is a survey on the subject Polynomial Systems Solving. First , Polynomial Systems definition is studied , then their solution techniques are studied, finally application areas are discussed. }
 \end{abstract}
 
 \section{Introduction}
 
-Spanning Tree of a graph G ,  is a tree (acyclic connected graph) that contains all the vertices's of that graph . As it is a tree structure, there is only one path from one point(vertex) to another.\footnote{https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/}  
+\subsection{Polynomial}
+ A polynomial is a mathematical expression involving a sum of powers in one or more variables (indeterminates) multiplied by coefficients. A polynomial of order/degree $\mathbf{d}$  in one variable (x)  (i.e., a univariate polynomial) with constant coefficients ($\mathbf{a_i}$) is given by \cite{wolframPolynomial}
+\begin{equation}
+    a_{0}+a_{1}x+a_{2}{x}^2+\cdots+a_{d}{x}^d 
+\end{equation}
+
+A polynomial may not have a term with negative and fractional exponent ($\mathrm{x^{-n}}$ and $\mathrm{x^{1/n}}$ ). Every term ( $\mathbf{a_ix^i}$ ) may be called as monomial (in some books only $\mathbf{x^i}$ is called as monomial). Also in abstract algebra books,  a \textbf{Polynomial} is called as \textbf{Polynomial Ring}. Abstract algebraic notions are explained in the next section.
+
+\subsection{Polynomial System}
+
+A system of (multivariate) polynomial equations is a set of simultaneous equations $\mathrm{f_{1}}$  = 0, ..., $\mathrm{f_{m}}$ = 0 where the $\mathrm{f_{i}}$ are polynomials in several variables, say $\mathrm{x_{1}}$, ..., $\mathrm{x_{n}}$, over some field k (usually $\mathbb{C}$ or $\mathbb{R}$ ). \cite{wikipediaSystemofPolynomialEquations}. 
+
+A \textbf{Univariate Polynomial System}  (coefficients  $\mathrm{a_{ij} \in R}$  and i,j,n $\mathrm{\in N}$) may be given as : 
+
+\begin{equation}  
+   \begin{cases}
+    a_{10}+a_{11}x+a_{12}x^2+a_{13}x^3+a_{14}x^4+\ldots+a_{1d}x^d=0 \\
+    a_{20}+a_{21}x+a_{22}x^2+a_{13}x^3+a_{14}x^4+\ldots+a_{2d}x^d=0 \\
+    a_{30}+a_{31}x+a_{12}x^2+a_{13}x^3+a_{14}x^4+\ldots+a_{3d}x^d=0 \\
+    \vdots \\
+    a_{m0}+a_{m1}x+a_{m2}x^2+a_{m3}x^3+a_{m4}x^4+\ldots+a_{md}x^d=0 \\
+  \end{cases}
+\end{equation}
+
+A \textbf{Bivariate Polynomial System}  (variables  $\mathrm{x,y \in R}$ ,  coefficients  $\mathrm{a_{ij} \in R}$  and i,j,n $\mathrm{\in N}$) may be given as : 
+
+\begin{equation}  
+   \begin{cases}
+    a_{10}+a_{11} {x_1}^{k_{11}} {x_2}^{k_{12}}\ldots+a_{12}{x_1}^{k_{11}} {x_2}^{k_{12}}\ldots+a_{13}x^3+a_{14}x^4+\ldots+a_{1d}x^d=0 \\
+    a_{20}+a_{21}x+a_{22}x^2+a_{13}x^3+a_{14}x^4+\ldots+a_{2d}x^d=0 \\
+    a_{30}+a_{31}x+a_{12}x^2+a_{13}x^3+a_{14}x^4+\ldots+a_{3d}x^d=0 \\
+    \vdots \\
+    a_{m0}+a_{m1}x+a_{m2}x^2+a_{m3}x^3+a_{m4}x^4+\ldots+a_{md}x^d=0 \\
+  \end{cases}
+\end{equation}
+
+
 
 \begin{figure}[h!]
   \centering
@@ -60,7 +89,7 @@ There is a recent paper that uses divide and conquer algorithm to find all spann
   \label{fig:coffee1}
 \end{figure}\footnote{http://www.springer.com/cda/content/document/cd\_downloaddocument/9789811034084\-c2.pdf}
 
-DCC\_Trees algorithm is as follows : \cite[chapter 2, p.~215]{berndStrumfelsBook}
+DCC\_Trees algorithm is as follows : 
 
 \begin{enumerate}
 \item Divide : Divide the graph into primary and secondary partitions
@@ -77,7 +106,7 @@ Finiteness of the algorithm can be proven by saying that we have limited number 
 
 Correctness of the algorithm is proven by the two theorems within the paper. 
 
-
+\cite[chapter 2, p.~215]{wolframPolynomial}
 
 
 \section{Conlusion}
@@ -204,9 +233,13 @@ Total number of spanning trees are calculated using  Kirchhoff’s Theorem.\foot
    IEEE Computer Graphics and Applications
    University of North Carolina,
    1994.
-\bibitem{berndStrumfelsBook}
+\bibitem{wikipediaSystemofPolynomialEquations}
   \textit{ https://en.wikipedia.org/wiki/System\_of\_polynomial\_equations},
    Wikipedia,2018.
+   
+\bibitem{wolframPolynomial}
+  \textit{ http://mathworld.wolfram.com/Polynomial.html},
+   Wolfram,2018.
 
 \end{thebibliography}
 
