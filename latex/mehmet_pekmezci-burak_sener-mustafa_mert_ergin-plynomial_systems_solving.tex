@@ -7,7 +7,7 @@
 \usepackage{tikz,graphics,color,fullpage,float,epsf,caption,subcaption}
 \usepackage[utf8]{inputenc}
 
-\title{\textbf{Plynomial Systems Solving}}
+\title{\textbf{Polynomial Systems Solving}}
 \author{Burak ŞENER\\
         Mehmet PEKMEZCİ\\
 		Mustafa Mert ERGİN
@@ -112,8 +112,44 @@ A \textbf{Multivariate Polynomial System}  (N variables  $\mathrm{x_1 \ldots x_N
 \section{Solver Software}
 
 \section{Applications}
+Systems of polynomial equations show up in many applications areas such as robotics (kinematics,motion planning, collision detection, etc.), computer vision (object modeling, surface fitting,recognition, etc.), graphics, geometric modeling (curve and surface intersections), computer-aided design, mechanical design, and chemical equilibrium systems. \cite{yanbinjiaArticle}
+\subsection{Robotics}
+System of polynomial equations may use to model a robot arm. If  ($\mathbf{x_i, y_i}$) is the coordinates of some joint,  ($\mathbf{x_i+1, y_i+1}$) is the coordinates of the next joint (or the hand) and the segment has length Li then we get the equation \cite{richterArticle} 
+ \begin{equation} 
+    (x_{i+1}-x_i)^2 + (y_{i+1}-y_i)^2=L_i^2
+\end{equation}
+Note that the angle at the i-th joint can be computed from the equations
+ \begin{equation} 
+    x_{i+1}-x_i = L_i \cos(\theta_i)
+\end{equation}
+ \begin{equation} 
+    y_{i+1}-y_i = L_i \sin(\theta_i)
+\end{equation}
 
-\section{Conlusion}
+\subsection{Geometry}
+Many statements in Euclidean geometry can be formulated as result about systems of polynomial equations.\cite{richterArticle} 
+
+
+\textbf {Example:} Euclidean geometry says that \textit{the bisectors of the three sides of a triangle meet in one point.}
+ 
+One vertex, A, of the triangle can be assumed to be the origin and another, B, to have coordinates (c, 0), without loss of generality. The third vertex, C, has coordinates (a,b).
+The bisectors of AB and BC meet in some point, with coordinates (x1, y1). We get the following equations
+\begin{equation} 
+    x_1- \frac {c}{2}=0
+\end{equation}
+\begin{equation} 
+    \frac {c-a}{b} \cdotp x_1 - y_1 + \frac {a^2 + b^2 - c^2}{2b} = 0
+\end{equation}
+
+Similarly, if (x2,y2) are the coordinates of the intersection of the bisectors of AB and AC we have
+\begin{equation} 
+    x_2- \frac {c}{2}=0
+\end{equation}
+\begin{equation} 
+    \frac {a}{b} \cdotp x_2 + y_2 - \frac {b^2 + a^2}{2b} = 0
+\end{equation}
+
+\section{Conclusion}
 
 
 \begin{thebibliography}{1}
@@ -242,6 +278,9 @@ A \textbf{Multivariate Polynomial System}  (N variables  $\mathrm{x_1 \ldots x_N
 \bibitem{wolframPolynomial}
   \textit{ http://mathworld.wolfram.com/Polynomial.html},
    Wolfram,2018.
+ \bibitem{yanbinjiaArticle}
+  \textit{ https://pdfs.semanticscholar.org/295c/9b5d5e1120fdb3d5cf2386d8f6a92884d9f5.pdf},
+   Yan-Bin Jia,2017.
 
 \end{thebibliography}
 
