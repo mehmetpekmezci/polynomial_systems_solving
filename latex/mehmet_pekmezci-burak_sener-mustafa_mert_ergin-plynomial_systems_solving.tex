@@ -22,9 +22,9 @@
 \section{Introduction}
 
 \subsection{Polynomial}
- A polynomial is a mathematical expression involving a sum of powers in one or more variables (indeterminates) multiplied by coefficients. A polynomial of order/degree $\mathbf{d}$  in one variable (x)  (i.e., a univariate polynomial) with constant coefficients ($\mathbf{a_i}$) is given by \cite{wolframPolynomial}
+ A polynomial is a mathematical expression involving a sum of powers in one or more variables (indeterminates) multiplied by coefficients. A polynomial of order/degree $\mathbf{d}$  in one variable ($\mathbf{x \in C}$) (i.e., a univariate polynomial) with constant coefficients ($\mathbf{a_i \in Q}$ ) is given by \cite{wolframPolynomial}
 \begin{equation} 
-    a_{0}+a_{1}x+a_{2}{x}^2+\cdots+a_{d}{x}^d 
+    P(x)=a_{0}+a_{1}x+a_{2}{x}^2+\cdots+a_{d}{x}^d 
 \end{equation}
 
 \subsubsection{Properties of Polynomials}
@@ -32,6 +32,7 @@
 Properties of polynomials are as follows :
 \begin{enumerate}
 \item A polynomial may not have a term with negative and fractional exponent ($\mathrm{x^{-n}}$ and $\mathrm{x^{1/n}}$ ).
+\item $\mathrm{x \in C}$ and $\mathrm{a_i \in Q}$
 \item Every term ( $\mathbf{a_ix^i}$ ) may be called as monomial (in some books only $\mathbf{x^i}$ is called as monomial). 
 \end{enumerate}
 
@@ -102,18 +103,21 @@ A \textbf{Multivariate Polynomial System}  (N variables  $\mathrm{x_1 \ldots x_N
 
 
 \section{Abstract Algeraic Notions}
-
+\cite{abstractAlgebraBook}
 \section{Geometrical Meaning}
 
 
 \section{Previous Work}
 
  
+\section{Polynomial Systems Solution Methods}
+
+ 
 \section{Solver Software}
 
 \section{Applications}
 
-\section{Conlusion}
+\section{Conclusion}
 
 
 \begin{thebibliography}{1}
@@ -231,6 +235,11 @@ A \textbf{Multivariate Polynomial System}  (N variables  $\mathrm{x_1 \ldots x_N
   Caminata Alessio , Gorla Elisa.
   \textit{Solving Multivariate Polynomial Systems and an Invariant from Commutative Algebra. },
    2017.
+\bibitem{abstractAlgebraBook}
+  Karl-Heinz Fieseler,
+  \textit{Groups, Rings and Fields },
+   Upsalla
+   2010.
 \bibitem{richterArticle}
   Johan Richter,
   \textit{Systems of polynomial equations},
