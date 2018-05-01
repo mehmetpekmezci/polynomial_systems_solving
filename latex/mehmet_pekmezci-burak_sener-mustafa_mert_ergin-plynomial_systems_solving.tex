@@ -362,17 +362,9 @@ A much more complicated surface is given by $\mathbf{V(x^2 - y^2z^2 + z^3)}$:
 
 
 \section{Solver Software}
-There are many kind of solving softwares available for polynomial systems. We can separate them to two groups as native libraries and services.
-Native libraries
-In this section three libraries will be explained.
-\subsection{Libraries}
-\paragraph{Michael Thomas Flanagan's Java Scientific Library}
-
-Flanagan library has many kind of operational functions, graph plotting, regression, polynomial operations, data smoothing etc.
-This library has many useful advantages but use for commercial purposes isn't permitted.
-
+There are many solving softwares available for computing polynomial systems.
 \paragraph{M4GB}\cite{m4gbarticle}
-is an  efficient algorithm for computing Grobner-Bases. It's an extension of Buchberger’s algorithm. It stores already computed (tail-)reduced multiplies of basis polynomials to prevent redundant work in reduction step. And it exploits efficient linear algebra for the reduction step.
+is an  efficient algorithm for computing Grobner-Bases written in C. It's an extension of Buchberger’s algorithm. It stores already computed (tail-)reduced multiplies of basis polynomials to prevent redundant work in reduction step. And it exploits efficient linear algebra for the reduction step.
 They run a benchmark test with four libraries, OpenF4, FGb, Magma and M4GB. Others are different libraries to compute Grobner-Bases.
 \begin{figure}[H]
   \begin{center}
@@ -389,6 +381,21 @@ They run a benchmark test with four libraries, OpenF4, FGb, Magma and M4GB. Othe
     \label{fig:m4gb_m_n_1}
   \end{center}
 \end{figure}
+\paragraph{SymPy}\cite{sympyarticle}
+is a Python open-source library for symbolic mathematics. For groebnar-bases calculation it has sympy.polys.polytools.groebner(F, *gens, **args) method.
+it uses order argument to set the monomial ordering that will be used to compute the basis. Order argument can be "lex", "grlex" and "grevlex". Default order is "lex"
+example usages are below.
+\begin{verbatim}
+>>> groebner([x*y - 2*y, 2*y**2 - x**2], x, y, order='lex')
+GroebnerBasis([x**2 - 2*y**2, x*y - 2*y, y**3 - 2*y], x, y, domain='ZZ', order='lex')
+
+>>> groebner([x*y - 2*y, 2*y**2 - x**2], x, y, order='grlex')
+GroebnerBasis([y**3 - 2*y, x**2 - 2*y**2, x*y - 2*y], x, y, domain='ZZ', order='grlex')
+
+>>> groebner([x*y - 2*y, 2*y**2 - x**2], x, y, order='grevlex')
+GroebnerBasis([y**3 - 2*y, x**2 - 2*y**2, x*y - 2*y], x, y, domain='ZZ', order='grevlex')
+\end{verbatim}
+
 \section{Applications}
 Systems of polynomial equations show up in many applications areas such as robotics (kinematics,motion planning, collision detection, etc.), computer vision (object modeling, surface fitting,recognition, etc.), graphics, geometric modeling (curve and surface intersections), computer-aided design, mechanical design, and chemical equilibrium systems. \cite{yanbinjiaArticle}
 \subsection{Robotics}
@@ -572,9 +579,13 @@ Similarly, if (x2,y2) are the coordinates of the intersection of the bisectors o
   \textit{ https://pdfs.semanticscholar.org/295c/9b5d5e1120fdb3d5cf2386d8f6a92884d9f5.pdf},
    Yan-Bin Jia,2017.
 \bibitem{m4gbarticle}
-  Rusydi Makarim, Marc Stevens
+  Rusydi Makarim, Marc Stevens,
   \textit{ M4GB: An Efficient Gröbner-Basis Algorithm},
    ISSAC 2017.
+\bibitem{sympyarticle}
+  Meurer, Aaron & P. Smith, Christopher & Paprocki, Mateusz & Čertík, Ondřej & B. Kirpichev, Sergey & Rocklin, Matthew & Kumar, AMiT & Ivanov, Sergiu & Moore, Jason & Singh, Sartaj & Rathnayake, Thilina & Vig, Sean & E. Granger, Brian & P. Muller, Richard & Bonazzi, Francesco & Gupta, Harsh & Vats, Shivam & Johansson, Fredrik & Pedregosa, Fabian & Scopatz, Anthony,
+   \textit{ SymPy: Symbolic computing in Python},
+    PeerJ Computer Science. 3. e103. 10.7717/peerj-cs.103 2017.
 \bibitem{coxLittleOshea}
    Cox, Little, O'Shea,
    \textit{Ideals, Varieties, and Algorithms Book},
