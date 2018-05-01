@@ -33,7 +33,7 @@ where all of the exponents $\mathrm{\alpha_1,...,\alpha_n }$ are nonnegative int
 A polynomial f in $\mathrm{x_1, x_2, ...,x_n}$ with coefficients in a field k is a finite linear combination (with coefficients in k) of monomials. We will write a polynomial f in the form :\cite{coxLittleOshea}
 
 \begin{equation}
-   f =  \sum_{\alpha}^{}{a_{\alpha}{x}^{\alpha} }, a^{\alpha} \in k, \alpha \in Z, {x}^{\alpha} \in C 
+   f =  \sum_{\alpha}^{}{a_{\alpha}{x}^{\alpha} }, a^{\alpha} \in k, \alpha \in Z, {x}^{\alpha} \in C
 \end{equation}
 
 
@@ -121,51 +121,51 @@ A \textbf{Multivariate Polynomial System}  (N variables  $\mathrm{x_1 \ldots x_N
 
 \section{Abstract Algebraic Notions}
 
-The following abstract algebraic notions are explained briefly in order to understand better the  polynomials and their relation to the geometry. \textbf{At the heart of the group theory, symmetry lies}. All the contents in this section is taken either from \cite{abstractAlgebraBook} or \cite{coxLittleOshea} if not cited explicitly. 
+The following abstract algebraic notions are explained briefly in order to understand better the  polynomials and their relation to the geometry. \textbf{At the heart of the group theory, symmetry lies}. All the contents in this section is taken either from \cite{abstractAlgebraBook} or \cite{coxLittleOshea} if not cited explicitly.
 
-\subsection{Group} 
+\subsection{Group}
 A group is a pair (G,$\mathrm{\mu}$) with a non-empty set G and a “binary operation” ($\mathrm{\mu}$)  that satisfies  :
 \begin{enumerate}
-\item \textbf{Closure} : $\mathrm{a, b \in G \implies \mu(a,b) \in G}$ 
-\item \textbf{Associativity} : $\mathrm{a, b, c \in G, \mu(\mu(a,b),c)=\mu(a,\mu(b,c))}$ 
+\item \textbf{Closure} : $\mathrm{a, b \in G \implies \mu(a,b) \in G}$
+\item \textbf{Associativity} : $\mathrm{a, b, c \in G, \mu(\mu(a,b),c)=\mu(a,\mu(b,c))}$
 \item \textbf{Neutral Element} : $\mathrm{\exists e \in G, \forall a \in G, \mu(a,e)=\mu(e,a)=a }$
-\item \textbf{Inverse Element} : $\mathrm{\forall a \in G, \exists a^{-1} \in G , \mu(a,a^{-1})=\mu(a^{-1},a)=e}$ 
+\item \textbf{Inverse Element} : $\mathrm{\forall a \in G, \exists a^{-1} \in G , \mu(a,a^{-1})=\mu(a^{-1},a)=e}$
 \end{enumerate}
 
 \textbf{For Example} : (N,+), (R\textbackslash0,.). \\
 \newline
 
 
-  
-\subsubsection{Commutative (Abelien) Group} 
+
+\subsubsection{Commutative (Abelien) Group}
 if a group has the commutativity property, it is called commutative (Abelien) group.
 
 \begin{enumerate}
 \item \textbf{Commutativity} : $\mathrm{\forall a,b \in G, \mu(a,b)=\mu(b,a)}$
 \end{enumerate}
 
-\subsubsection{Homomorphism} 
-A map(function) between two groups ($\mathrm{\phi : G \rightarrow H }$) , is called Homomorphism iff 
+\subsubsection{Homomorphism}
+A map(function) between two groups ($\mathrm{\phi : G \rightarrow H }$) , is called Homomorphism iff
 \begin{equation}
- \phi(a+b)=\phi(a)*\phi(b) 
-\end{equation}     
+ \phi(a+b)=\phi(a)*\phi(b)
+\end{equation}
 ($\mathrm{a, b \in G, (G,+) , (H,*)}$)\\
-For example exponential function (or map) is a Homomorphism because $\mathrm{e^{(a+b)}=e^a.e^b}$,  
+For example exponential function (or map) is a Homomorphism because $\mathrm{e^{(a+b)}=e^a.e^b}$,
 \begin{enumerate}
 \item \textbf{Isomorphism}  : if $\mathrm{\phi}$ is bijective
 \item \textbf{Automorphism} : Isomorphism with G=H
 \end{enumerate}
 
 
-\subsection{Ring} 
+\subsection{Ring}
 Every ring is a group with one aditional operation. (i.e. (G,+,. ). More formally, a ring is a triple (R,$\mathrm{\alpha,\mu}$) , with a set R together with two maps(or functions, or operations) :
 \begin{equation}
  \alpha : R \times R \rightarrow R, (a,b) \rightarrow a+b:=\alpha(a,b), addition
-\end{equation}     
+\end{equation}
  and
 \begin{equation}
  \mu : R \times R \rightarrow R, (a,b) \rightarrow a.b:=\mu(a,b), multiplication
-\end{equation}     
+\end{equation}
 
 such that :
 \begin{enumerate}
@@ -189,7 +189,7 @@ polynomial f divides a polynomial g provided that g = f.h for some polynomial
 $\mathrm{ h \in k[x_{1},x_2,.....,x_n]}$.\newline
 One can show that, under addition and multiplication, $\mathrm{k[x_{1},x_2,.....,x_n]}$ satisfies all of the field axioms except for the existence of multiplicative inverses (because, for example, 1/x 1 is not a polynomial). \newline
 Such a mathematical structure is called a commutative ring and for this reason we will
-refer to $\mathbf{k[x_{1},x_2,.....,x_n]}$ as a \textbf{polynomial ring}.The coefficients of the polynomials are the elements of a Polynomial Ring.(We put the $\mathrm{a_i}$ instead of $\mathrm{x_i}$)  
+refer to $\mathbf{k[x_{1},x_2,.....,x_n]}$ as a \textbf{polynomial ring}.The coefficients of the polynomials are the elements of a Polynomial Ring.(We put the $\mathrm{a_i}$ instead of $\mathrm{x_i}$)
 
 
 
@@ -203,7 +203,7 @@ Given a field k and a positive integer n, we define the n-dimensional
 affine space over k to be the set
 \begin{equation}
  k^n =\{(a_1,..,a_n)| a_1, .. ,a_n \in k \}
-\end{equation}     
+\end{equation}
 For an example of affine space, consider the case k = $\mathrm{R}$ .Here we get the familiar space $\mathrm{R^n}$ from calculus and linear algebra. In general, we call
 $\mathrm{k^1=k}$ affine line, and $\mathrm{k^2}$ affine plane.\newline
 
@@ -230,9 +230,9 @@ The (directed) distance between locations is a vector space. Saying something is
 And you can pick a spot and describe locations as the directed distance from that particular spot, but the spot picked was arbitrary, and if it would be useful to pick a different spot, you are free to.
 
 \subsubsection{How Polynomials Relate to Affine Space}
-\cite{coxLittleOshea}The key idea is that a polynomial  
+\cite{coxLittleOshea}The key idea is that a polynomial
 \begin{equation}
-   f =  \sum_{\alpha}^{}{a_{\alpha}{x}^{\alpha} }, f \in k, a^{\alpha} \in k, \alpha \in Z, {x}^{\alpha} \in C 
+   f =  \sum_{\alpha}^{}{a_{\alpha}{x}^{\alpha} }, f \in k, a^{\alpha} \in k, \alpha \in Z, {x}^{\alpha} \in C
 \end{equation}
 gives the function
 \begin{equation}
@@ -240,10 +240,10 @@ gives the function
 \end{equation}
 defined as follows: given $\mathbf{(a_{1},a_2,.....,a_n) \in k^n}$ , replace every  $\mathrm{x_i}$ by $\mathrm{a_i}$ in the expression for f. Since all of the coefficients also lie in k, this operation gives an element $\mathbf{f(a_{1},a_2,.....,a_n) \in k}$.
 The ability to regard a polynomial as a function is what makes it possible to link algebra and geometry.
-\subsection{Affine Varieties} 
+\subsection{Affine Varieties}
 \cite{coxLittleOshea} Affine Variety is a geometric object defined as follows :\newline
- Let k be a field, and let $\mathrm{f_1,f_2,.....,f_n}$ be polynomials $\mathrm{\in k[x_1,...,x_n]}$ . Then we set 
- 
+ Let k be a field, and let $\mathrm{f_1,f_2,.....,f_n}$ be polynomials $\mathrm{\in k[x_1,...,x_n]}$ . Then we set
+
 \begin{equation}
    V(f_1,..,f_s)=\{(a_1,..a_n) \in k^n | f_i(a_1,...1_n)=0 , \forall i, 1 \le i \le s  \}
 \end{equation}
@@ -261,7 +261,7 @@ The variety $\mathrm{V(x^2+y^2-1) \subseteq R^2}$ is the circle of radius 1 cent
 \end{figure}
 
 
- 
+
 \subsubsection{Example 2}
 The variety $\mathrm{V((x^2+y^2-1)(3x+6y-4)) \subseteq R^2}$ defines all the points satisfying the circle of radius 1 centered at the origin and the line defined by the equation  (3x+6y-4):
 \begin{figure}[H]
@@ -280,8 +280,8 @@ Ideal is an algebraic object. The real importance of ideals is that they will gi
 \textbf{Definition 1 :}\newline
 R is a commutative ring, a subset $\mathrm{ I \subseteq k[x_1,...,x_n] }$ ($\mathrm{ I \subseteq R }$) is an \textbf{Ideal} if it satisfies :
 \begin{enumerate}
-\item $\mathrm{0 \in I}$ 
-\item $\mathrm{f,g \in I \implies f+g \in I}$ 
+\item $\mathrm{0 \in I}$
+\item $\mathrm{f,g \in I \implies f+g \in I}$
 \item $\mathrm{f \in I, h \in G,\implies h.f \in I  }$
 \end{enumerate}
 
@@ -292,7 +292,7 @@ R is a commutative ring, a subset $\mathrm{ I \subseteq k[x_1,...,x_n] }$ ($\mat
 
 
 
- 
+
 \subsection{Relation Between Algebra and Geometry}
 
 \begin{figure}[H]
@@ -343,7 +343,88 @@ A much more complicated surface is given by $\mathbf{V(x^2 - y^2z^2 + z^3)}$:
   \end{center}
 \end{figure}
 
-\section{Polynomial Systems Solution Methods}
+\section{Polynomial System Solution with Groebner Bases}
+
+Buchberger developed the theory of Groebner Bases in 1965 via his thesis. The source of the develpment of Groebner Bases goes back to solving some thoretical problems of polynomial ring theory. These problems can be named as below:
+
+1- The Ideal Description Problem: Does every ideal $\mathrm{I \subset k[x_1....x_n]}$
+have a finite generating set?
+
+2- The Ideal Membership Problem: Given $\mathrm{f \in k[x_1....x_n]}$ and an ideal $\mathrm{I = <f_1....f_n>}$ determine if $\mathrm{f \in I}$.
+
+3- The Problem of Solving Polynomial Equations: Find all common solutions in $\mathrm{k^n}$ of a system of polynomial equations.
+$\mathrm{f_1(x_1 \ldots x_n) = \ldots = f_s(x_1 \ldots x_n) = 0}$.
+
+4- The Implicitization Problem: Let V be a subset of $\mathrm{k^n}$ given parametrically as
+\begin{center}
+  $\mathrm{x_1 = g_1(t_1 \ldots t_n)} \newline
+    \vdots \newline
+    \mathrm{x_n = g_n(t_1 \ldots t_n)} \newline
+  $
+\end{center}
+
+If $g_i$ is polynomials or rational functions in the variables $t_j$ when V will be affine variety or part of one. Find a system of polynomial equations (in the $x_i$)
+that defines the variety.\\
+
+Although we are interested in the problem 3 all of the problems are closely interrelated. Groebner basis allows computations in multivariate polynomial rings similar to ones in single variable. Groebner bases can also be seen as generalization of Gaussian elimination of a linear system, which yields the row-echelon form in linear algebra.
+
+\subsection{Monomial Order}
+If we examine the polynomial division algorithm in k[x] and the row-reduction (Gaussian elimination) algorithm for systems of linear equations(or matrices) we see that ordering of terms is very important part of these operations.
+
+A monomial ordering on $k[x_1,x_2,....,x_n]$ is any relation $>$ on the set of monomials $\mathrm{x^\alpha = x_1^{\alpha_1} \ldots x_n^{\alpha_n}}$ \alpha \in $Z^n$ satisfying:\\
+1- $>$ is a total (or linear) order on $Z^n$.\\
+2- If $\mathrm{\alpha > \beta}$ and $\mathrm{\gamma \in Z^n}$, then $\mathrm{\alpha + \gamma > \beta + \gamma}$ \\
+3- $>$ is a well-ordering on $Z^n$. This means that every nonempty subset of $Z^n$ has a smallest element under $>$.
+
+\textbf{The Lexicographic (“Dictionary”) Order}: Let $\mathrm{\alpha = (\alpha_1,\alpha_2 \ldots \alpha_n) and \beta = (\beta_1,\beta_2 \ldots \beta_n) \in Z^n}$ we say $\mathrm{\alpha >_{lex} \beta}$ if in the vector difference $\mathrm{\alpha - \beta \in Z^n}$ the leftmost nonzero entry is positive. $\mathrm{x^\alpha >_{lex} x^\beta}$ if $\mathrm{\alpha >_{lex} \beta}$
+
+\textbf{The Graded Lexicographic Order}: Let $\mathrm{\alpha = (\alpha_1,\alpha_2 \ldots \alpha_n) and \beta = (\beta_1,\beta_2 \ldots \beta_n) \in Z^n}$ we say $\mathrm{\alpha >_{grlex} \beta}$ if,\\
+  $\mathrm{\mid{\alpha}\mid = \sum_{i=1}^{n}\alpha_i > \mid{\beta}\mid = \sum_{i=1}^{n}\beta_i}$ \text{or}
+  $\mathrm{|\mid{\alpha}\mid > \mid{\beta}\mid \text{and } $\mathrm{\alpha >_{lex} \beta}}$
+
+\textbf{Definitions:}Let $\mathrm{f=\sum_{\alpha}\alpha_\alpha x^\alpha}$ be a nonzero polynomial in k$[x_1,x_2 \ldots x_n]$ and let $>$ be a monomial order:\\
+(i) The \textbf{multidegree} of $f$ is multideg(f) = max($\mathrm{\alpha \in Z^n:\alpha_\alpha \neq 0}$) \\
+(ii) The \textbf{leading coefficient} of f is LC(f) = $\alpha_{multideg(f) }\in k$\\
+(iii) The \textbf{leading monomial} of f is LM(f) = $x^{multideg(f)}\in k$\\
+(iv) The \textbf{leading term} of f is LT(f) = LC(f) * LM(f)\\
+
+\subsection{The Multivariate Division Algorithm}
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.50\textwidth]{MultivariateDivisionAlgorithm.jpg}
+    \caption{}
+    \label{fig: }
+  \end{center}
+\end{figure}
+
+Division of multivariate polynomials can be done with algorithm above. This algorithm does not guarantee that given polynomial is in the ideal if the remainder is 0. Or vice verse. That is because the result and remainder changes when the order of the dividents change. That means if the type of monomial ordering changes the remainder changes. So, that is why we can not solve the problems related to ideals in polynomial rings with this algorithm.
+
+\subsection{Groebner Bases}
+
+The Groebner basis is a special generating set for ideals $(f_1,f_2,\ldots,f_n)$ for which the multivariate division algorithm for a given f returns remainder 0 if and only if f \in $<g_1,g_2,...,g_n>$. Every nonzero ideal $I \in k[x_1,x_2,\ldots,x_n]$ has the Groebner Bases. \\
+
+Moreover, due to multivariate division algorithm if $f \in I$ we have $\mathrm{f=q_1g_1 + q_2g_2 + .... + q_sg_s + r}$
+and no term of r is divisible by any of $LT(g_1),LT(g_2),\ldots,LT(g_n)$. Because none of the $LT(g_i)$ divides r by definition we must have r=0. This shows that $f \in <LT(g_1),LT(g_2) \ldots LT(g_n)>$. And it is proven that r is unique for a Groebner basis.\\
+
+Testing whether a basis has a high connection with S-polynomial for a given pair of polynomials. Let $f,g \in k[x_1,x_2,\ldots,x_n]$ be nonzero polynomials. Find the least common multiple of their leading monomials: $x^y = LCM(LM(f),LM(g))$. Then the S-polynomial of f and g is defined by:
+\begin{equation}
+  S(f,g) = \frac{x^y}{LT(f)}\times{f} - \frac{x^y}{LT(g)}\times{f}
+\end{equation}
+
+S-polynomials porvide cancellation of leading terms.
+
+\subsection{Buchberger`s Algorithm}
+\textbf{Buchberger's Criterion:} Let I be a polynmial ideal. Then a basis $G = {g_1,g_2, ldots, g_n}$ for I is a Groebner basis for I if and only if for all pairs $i \neq j$, the remainder on division of $S(g_i,g_j)$ by G is 0.
+
+Buchberger's algorithm which produces a Groebner bases for nonzero polynomial ideal, is based on the createrion above.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.50\textwidth]{Buchberger.jpg}
+    \caption{}
+    \label{fig: }
+  \end{center}
+\end{figure}
 
 
 \section{Solver Software}
