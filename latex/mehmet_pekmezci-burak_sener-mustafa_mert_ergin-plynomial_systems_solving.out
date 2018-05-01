@@ -20,10 +20,14 @@
 \BOOKMARK [3][-]{subsubsection.2.5.2}{Example 2}{subsection.2.5}% 20
 \BOOKMARK [2][-]{subsection.2.6}{Ideal}{section.2}% 21
 \BOOKMARK [2][-]{subsection.2.7}{Relation Between Algebra and Geometry}{section.2}% 22
-\BOOKMARK [1][-]{section.3}{Geometrical Meaning}{}% 23
-\BOOKMARK [1][-]{section.4}{Polynomial Systems Solution Methods}{}% 24
-\BOOKMARK [1][-]{section.5}{Solver Software}{}% 25
-\BOOKMARK [1][-]{section.6}{Applications}{}% 26
-\BOOKMARK [2][-]{subsection.6.1}{Robotics}{section.6}% 27
-\BOOKMARK [2][-]{subsection.6.2}{Geometry}{section.6}% 28
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 29
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Relation Between Ideal and Variety}{subsection.2.7}% 23
+\BOOKMARK [3][-]{subsubsection.2.7.2}{Relation Between Polynomial and Ring}{subsection.2.7}% 24
+\BOOKMARK [3][-]{subsubsection.2.7.3}{Greatest Common Divisor \(gcd\)}{subsection.2.7}% 25
+\BOOKMARK [3][-]{subsubsection.2.7.4}{Algebraic Notions and Geometric Notions}{subsection.2.7}% 26
+\BOOKMARK [1][-]{section.3}{Geometrical Meaning}{}% 27
+\BOOKMARK [1][-]{section.4}{Polynomial Systems Solution Methods}{}% 28
+\BOOKMARK [1][-]{section.5}{Solver Software}{}% 29
+\BOOKMARK [1][-]{section.6}{Applications}{}% 30
+\BOOKMARK [2][-]{subsection.6.1}{Robotics}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.2}{Geometry}{section.6}% 32
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 33
