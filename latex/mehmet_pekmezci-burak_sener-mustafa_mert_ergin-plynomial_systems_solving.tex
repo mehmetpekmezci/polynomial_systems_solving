@@ -431,7 +431,7 @@ Although we are interested in the problem 3 all of the problems are closely inte
 \subsection{Monomial Order}
 If we examine the polynomial division algorithm in k[x] and the row-reduction (Gaussian elimination) algorithm for systems of linear equations(or matrices) we see that ordering of terms is very important part of these operations.
 
-A monomial ordering on $k[x_1,x_2,....,x_n]$ is any relation $>$ on the set of monomials $\mathrm{x^\alpha = x_1^{\alpha_1} \ldots x_n^{\alpha_n}}$ \alpha \in $Z^n$ satisfying:\\
+A monomial ordering on $\mathrm{k[x_1,x_2,....,x_n]}$ is any relation > on the set of monomials $\mathrm{x^\alpha = x_1^{\alpha_1} \ldots x_n^{\alpha_n} , \alpha \in Z^n}$ satisfying:
 1- $>$ is a total (or linear) order on $Z^n$.\\
 2- If $\mathrm{\alpha > \beta}$ and $\mathrm{\gamma \in Z^n}$, then $\mathrm{\alpha + \gamma > \beta + \gamma}$ \\
 3- $>$ is a well-ordering on $Z^n$. This means that every nonempty subset of $Z^n$ has a smallest element under $>$.
@@ -440,7 +440,7 @@ A monomial ordering on $k[x_1,x_2,....,x_n]$ is any relation $>$ on the set of m
 
 \textbf{The Graded Lexicographic Order}: Let $\mathrm{\alpha = (\alpha_1,\alpha_2 \ldots \alpha_n) and \beta = (\beta_1,\beta_2 \ldots \beta_n) \in Z^n}$ we say $\mathrm{\alpha >_{grlex} \beta}$ if,\\
   $\mathrm{\mid{\alpha}\mid = \sum_{i=1}^{n}\alpha_i > \mid{\beta}\mid = \sum_{i=1}^{n}\beta_i}$ \text{or}
-  $\mathrm{|\mid{\alpha}\mid > \mid{\beta}\mid \text{and } $\mathrm{\alpha >_{lex} \beta}}$
+  $\mathrm{|\mid{\alpha}\mid > \mid{\beta}\mid \text{and } , \alpha >_{lex} \beta}$
 
 \textbf{Definitions:}Let $\mathrm{f=\sum_{\alpha}\alpha_\alpha x^\alpha}$ be a nonzero polynomial in k$[x_1,x_2 \ldots x_n]$ and let $>$ be a monomial order:\\
 (i) The \textbf{multidegree} of $f$ is multideg(f) = max($\mathrm{\alpha \in Z^n:\alpha_\alpha \neq 0}$) \\
@@ -461,7 +461,7 @@ Division of multivariate polynomials can be done with algorithm above. This algo
 
 \subsection{Groebner Bases}
 
-The Groebner basis is a special generating set for ideals $(f_1,f_2,\ldots,f_n)$ for which the multivariate division algorithm for a given f returns remainder 0 if and only if f \in $<g_1,g_2,...,g_n>$. Every nonzero ideal $I \in k[x_1,x_2,\ldots,x_n]$ has the Groebner Bases. \\
+The Groebner basis is a special generating set for ideals $\mathrm{(f_1,f_2,\ldots,f_n)}$ for which the multivariate division algorithm for a given f returns remainder 0 if and only if $\mathrm{f \in <g_1,g_2,...,g_n>}$. Every nonzero ideal $\mathrm{I \in k[x_1,x_2,\ldots,x_n]}$ has the Groebner Bases. 
 
 Moreover, due to multivariate division algorithm if $f \in I$ we have $\mathrm{f=q_1g_1 + q_2g_2 + .... + q_sg_s + r}$
 and no term of r is divisible by any of $LT(g_1),LT(g_2),\ldots,LT(g_n)$. Because none of the $LT(g_i)$ divides r by definition we must have r=0. This shows that $f \in <LT(g_1),LT(g_2) \ldots LT(g_n)>$. And it is proven that r is unique for a Groebner basis.\\
